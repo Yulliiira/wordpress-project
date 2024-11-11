@@ -3,7 +3,6 @@
 
 <head>
     <?php wp_head(); ?>
-    <title>Website</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -23,6 +22,7 @@
                 <h1>Yuliya Raskatova</h1>
                 <p>PHP-developer &nbsp;&bull;&nbsp; Sportsman &nbsp;&bull;&nbsp; Never asked for this</p>
                 <nav>
+                    <?php wp_nav_menu('header'); ?>
                     <ul>
                         <li><a href="https://www.instagram.com/yulliiira_/profilecard/?igsh=MnJ2dnNwaGxsNGkz" class="icon brands fa-instagram" aria-hidden="true">
                                 <span class="label">Instagram</span></a></li>

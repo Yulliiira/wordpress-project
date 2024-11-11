@@ -6,10 +6,27 @@ function my_theme_setup()
 {
     add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
     add_theme_support('post-thumbnails');
+    //добавляем динамический тег title
+    add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'my_theme_setup');
 
+//готовим почву для перевода сайта
+function my_website_menus()
+{
+    //собираем несколько зон меню
+    $locations = array(
+        'header' => __('Header Menu', 'my_website'),
+        'footer' => __('Footer Menu', 'my_website')
+    );
+    //регистрируем зоны меню
+    register_nav_menus($locations);
+}
+//хук для инициализации меню
+add_action('init', 'my_website_menus');
+
 // Функция для подключения стилей и скриптов
+
 function my_website_scripts()
 {
     // Подключение основного style.css (пустой файл, созданный вами)
