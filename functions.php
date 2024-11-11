@@ -10,6 +10,11 @@ function my_theme_setup()
     add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'my_theme_setup');
+// add_filter('nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 3);
+// function filter_nav_menu_link_attributes($classes){
+//     $classes[] = 'class="nav-link"';
+//     return $classes;
+// }
 
 //готовим почву для перевода сайта
 function my_website_menus()
